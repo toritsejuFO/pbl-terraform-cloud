@@ -12,9 +12,9 @@ ownerEmail     = "toriboi.fo@gmail.com"
 managedBy      = "Terraform"
 billingAccount = "792628092527"
 
-bastion_ami   = "ami-0f0d43328d9d1d966"
-nginx_ami     = "ami-0b8ce3b5b0c2079ba"
-webserver_ami = "ami-074ec5445a292dd36"
+bastion_ami   = "ami-0dd4ec61a817e0ce4"
+nginx_ami     = "ami-09376675c22512266"
+webserver_ami = "ami-0d21606121d370fef"
 
 keypair = "default_kp"
 
