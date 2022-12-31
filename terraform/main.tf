@@ -62,25 +62,12 @@ module "EFS" {
   tags           = var.tags
 }
 
-# module "RDS" {
-#   source          = "./modules/RDS"
-#   master_username = var.master_username
-#   master_password = var.master_password
-#   db_sg           = [module.Security.datalayer_sg]
-#   private_subnets = [module.VPC.private_subnet_3_id, module.VPC.private_subnet_4_id]
-#   name            = var.name
-#   tags            = var.tags
-# }
-
-# Optional, not part of core infrastructure
-# The Module creates instances for jenkins, sonarqube abd jfrog
-module "Compute" {
-  source          = "./modules/compute"
-  jenkins_ami     = var.webserver_ami
-  sonar_ami       = var.webserver_ami
-  jfrog_ami       = var.webserver_ami
-  compute_subnets = module.VPC.public_subnet_1_id
-  compute_sg      = [module.Security.ext_lb_sg]
-  keypair         = var.keypair
+module "RDS" {
+  source          = "./modules/RDS"
+  master_username = var.master_username
+  master_password = var.master_password
+  db_sg           = [module.Security.datalayer_sg]
+  private_subnets = [module.VPC.private_subnet_3_id, module.VPC.private_subnet_4_id]
   name            = var.name
+  tags            = var.tags
 }
