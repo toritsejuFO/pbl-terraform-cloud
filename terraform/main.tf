@@ -62,12 +62,12 @@ module "EFS" {
   tags           = var.tags
 }
 
-# module "RDS" {
-#   source          = "./modules/RDS"
-#   master_username = var.master_username
-#   master_password = var.master_password
-#   db_sg           = [module.Security.datalayer_sg]
-#   private_subnets = [module.VPC.private_subnet_3_id, module.VPC.private_subnet_4_id]
-#   name            = var.name
-#   tags            = var.tags
-# }
+module "RDS" {
+  source          = "./modules/RDS"
+  master_username = var.master_username
+  master_password = var.master_password
+  db_sg           = [module.Security.datalayer_sg]
+  private_subnets = [module.VPC.private_subnet_3_id, module.VPC.private_subnet_4_id]
+  name            = var.name
+  tags            = var.tags
+}
