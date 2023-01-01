@@ -65,7 +65,7 @@ resource "aws_lb_listener" "nginx_listner_http" {
 # Internal ALB
 resource "aws_lb" "int_alb" {
   name               = "${var.name}-Int-ALB"
-  internal           = false
+  internal           = true
   load_balancer_type = var.load_balancer_type
   ip_address_type    = "ipv4"
   security_groups    = [var.private_sg]
