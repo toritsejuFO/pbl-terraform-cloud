@@ -12,10 +12,10 @@ keyed_groups:
 
 filters:
   tag:Name:
-    - IAC-bastion-ASG
-    - IAC-nginx-ASG
-    - IAC-tooling-ASG
-    - IAC-wordpress-ASG
+    - IAC-Bastion-ASG
+    - IAC-Nginx-ASG
+    - IAC-Tooling-ASG
+    - IAC-Wordpress-ASG
   instance-state-name : running
   
 hostnames:
