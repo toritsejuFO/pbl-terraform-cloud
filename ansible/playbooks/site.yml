@@ -1,12 +1,12 @@
 ---
-- hosts: tag_Name_ACS_nginx
+- hosts: tag_Name_IAC_Nginx_ASG
 - name: nginx assignment
   import_playbook: ../static-assignments/nginx.yml
 
-- hosts: tag_Name_ACS_tooling
+- hosts: tag_Name_IAC_Tooling_ASG
 - name: tooling assignment
   import_playbook: ../static-assignments/tooling.yml
 
-- hosts: tag_Name_ACS_wordpress
+- hosts: tag_Name_IAC_Wordpress_ASG
 - name: wordpress assignment
   import_playbook: ../static-assignments/wordpress.yml
